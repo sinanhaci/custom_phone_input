@@ -241,9 +241,11 @@ class IntlPhoneField extends StatefulWidget {
   final EdgeInsets flagsButtonMargin;
   final Color dialogBackgroundColor;
   final Color backButtonColor;
+  final TextStyle searchFieldStyle;
 
   const IntlPhoneField({
     Key? key,
+    required this.searchFieldStyle,
     required this.backButtonColor,
     required this.dialogBackgroundColor,
     this.initialCountryCode,
@@ -287,6 +289,7 @@ class IntlPhoneField extends StatefulWidget {
     this.cursorWidth = 2.0,
     this.showCursor = true,
     this.pickerDialogStyle,
+
     this.flagsButtonMargin = EdgeInsets.zero,
   }) : super(key: key);
 
@@ -352,6 +355,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
         context: context,
         child: StatefulBuilder(
           builder: (ctx, setState) => CountryPickerDialog(
+            searchFieldStyle:widget.searchFieldStyle,
             backButtonColor: widget.backButtonColor,
             backgroundColor: widget.dialogBackgroundColor,
             style: widget.pickerDialogStyle,

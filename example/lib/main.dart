@@ -55,6 +55,7 @@ class _MyAppState extends State<MyApp> {
                   height: 10,
                 ),
                 IntlPhoneField(
+                  searchFieldStyle: TextStyle(),
                   pickerDialogStyle: _pickerDialogStyle(context),
                   dialogBackgroundColor: Colors.white,
                   backButtonColor: Colors.grey.withOpacity(0.3),
