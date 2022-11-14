@@ -81,6 +81,7 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
 
   @override
   Widget build(BuildContext context) {
+    var theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -96,9 +97,9 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
                 height: 45,
                 width: 45,
                 decoration: BoxDecoration(
-                    color: widget.backButtonColor,
+                    color: theme.colorScheme.onBackground,
                     borderRadius: BorderRadius.circular(14)),
-                child: const Icon(Icons.arrow_back_ios_new),
+                child: Icon(Icons.arrow_back_ios_new,color: widget.backButtonColor,),
                 //  icon == null
                 //     ? Center(
                 //         child: SvgPicture.asset(svgIcon!),
